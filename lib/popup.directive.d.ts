@@ -1,0 +1,34 @@
+import { ElementRef, EventEmitter, OnDestroy } from '@angular/core';
+import { Content, LatLng, LatLngExpression, LeafletEvent, Point, Popup } from 'leaflet';
+import { LayerProvider } from './layer.provider';
+export declare class PopupDirective extends Popup implements OnDestroy {
+    layerProvider: LayerProvider;
+    contentChange: EventEmitter<Content>;
+    openedChange: EventEmitter<boolean>;
+    latChange: EventEmitter<number>;
+    lngChange: EventEmitter<number>;
+    positionChange: EventEmitter<LatLng>;
+    openEvent: EventEmitter<LeafletEvent>;
+    closeEvent: EventEmitter<LeafletEvent>;
+    constructor(elementRef: ElementRef, layerProvider: LayerProvider);
+    ngOnDestroy(): void;
+    setContent(content: any): this;
+    content: Content;
+    opened: boolean;
+    setLatLng(latlng: LatLngExpression): this;
+    lat: number;
+    lng: number;
+    position: LatLng;
+    maxWidth: number;
+    minWidth: number;
+    maxHeight: number;
+    autoPan: boolean;
+    autoPanPaddingTopLeft: Point;
+    autoPanPaddingBottomRight: Point;
+    autoPanPadding: Point;
+    keepInView: boolean;
+    closeButton: boolean;
+    autoClose: boolean;
+    className: string;
+    pane: string;
+}
