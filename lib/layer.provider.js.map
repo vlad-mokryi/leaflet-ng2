@@ -1,1 +1,0 @@
-{"version":3,"sources":["../ts/layer.provider.ts"],"names":[],"mappings":";;AAAA,sCAA2C;AAI3C;IAAA;IAQA,CAAC;IANM,wBAAU,GAA0B;QAC3C,EAAE,IAAI,EAAE,iBAAU,EAAE;KACnB,CAAC;IACF,kBAAkB;IACX,4BAAc,GAAmE,cAAM,OAAA,EAC7F,EAD6F,CAC7F,CAAC;IACF,oBAAC;CARD,AAQC,IAAA;AARY,sCAAa","file":"layer.provider.js","sourceRoot":""}

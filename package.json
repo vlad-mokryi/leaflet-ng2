@@ -9,7 +9,7 @@
     "clean": "rm -Rf coverage browser-test/bundle.js lib node_modules",
     "reinit": "npm run clean; npm run init",
     "transpile": "ngc",
-    "postinstall": "echo PostInstall running!",
+    "postinstall": "npm run transpile",
     "lint": "tslint ts/*.ts",
     "test": "npm run lint && npm run transpile && istanbul cover _mocha -- -- test/*.js",
     "browser-test": "npm run transpile; browserify test/index.js -o browser-test/bundle.js",
