@@ -1,0 +1,32 @@
+import { ElementRef, EventEmitter, OnDestroy } from '@angular/core';
+import { Content, Direction, LatLng, LatLngExpression, LeafletEvent, Point, Tooltip } from 'leaflet';
+import { LayerProvider } from './layer.provider';
+export declare class TooltipDirective extends Tooltip implements OnDestroy {
+    layerProvider: LayerProvider;
+    contentChange: EventEmitter<Content>;
+    openedChange: EventEmitter<boolean>;
+    latChange: EventEmitter<number>;
+    lngChange: EventEmitter<number>;
+    positionChange: EventEmitter<LatLng>;
+    opacityChange: EventEmitter<number>;
+    openEvent: EventEmitter<LeafletEvent>;
+    closeEvent: EventEmitter<LeafletEvent>;
+    constructor(layerProvider: LayerProvider, elementRef: ElementRef);
+    ngOnDestroy(): void;
+    setContent(content: any): this;
+    content: Content;
+    opened: boolean;
+    setLatLng(latlng: LatLngExpression): this;
+    lat: number;
+    lng: number;
+    position: LatLng;
+    setOpacity(val: number): void;
+    opacity: number;
+    className: string;
+    pane: string;
+    interactive: boolean;
+    sticky: boolean;
+    direction: Direction;
+    permanent: boolean;
+    offset: Point;
+}
